@@ -133,6 +133,15 @@ function getRottenTomatoesRatingObject (data) {
 			return console.log(err);
         }
         var dataArr=data.split(",");
+        userCommand = dataArr[0];
+        userQuerry = dataArr[1];
         console.log(dataArr);
+        if(userCommand==="spotify-this-song"){
+            showSongInfo();
+        }else if(userCommand==="concert-this"){
+            showConcertInfo();
+        }else if(userCommand==="movie-this"){
+            showMovieInfo();
+        }
 	});
 }
