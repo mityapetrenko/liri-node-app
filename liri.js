@@ -58,7 +58,7 @@ function showSongInfo() {
         userQuerry = "The Sign"; //default Song
     }
     spotify.search({ type: 'track', query: userQuerry}).then(function(response) {
-    console.log(response);
+
     var songs = response.tracks.items[0];
 
     console.log("**********SONG INFO*********");
@@ -112,7 +112,6 @@ function getRottenTomatoesRatingObject (data) {
         var dataArr=data.split(",");
         userCommand = dataArr[0];
         userQuerry = dataArr[1];
-        console.log(dataArr);
         if(userCommand==="spotify-this-song"){
             showSongInfo();
         }else if(userCommand==="concert-this"){
